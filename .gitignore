@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env.*
+*.env
+.env
+
+# uv
+uv.lock
+
+# Tailwindcss
+tw4cli.exe
+
+# Editor config
+.vscode/
