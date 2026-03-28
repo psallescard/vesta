@@ -9,8 +9,22 @@ CSS_OUT 		= static/css/styles.css
 
 # -------------------------------------------------------------------------------------
 
-.PHONY: migrations migrate run test tw-build tw-watch docs
+.PHONY: help migrations migrate run test tw-build tw-watch docs
 
+help:
+	@echo ""
+	@echo "Available targets:"
+	@echo "    -[migrations] Run Django makemigrations for an specified app (APP)."
+	@echo "    -[migrate] Run Django migrate for all migration files."
+	@echo "    -[run] Run the Django development server for the specified IP and PORT."
+	@echo "    -[test] Run Django test suite."
+	@echo "    -[tw-build] Compile all tailwindcss in the template files."
+	@echo "    -[tw-watch] Dinamically compile the tailwindcss in template files."
+	@echo "    -[docs] Launch the mkdocs documentation server."
+	@echo ""
+	@echo "By default, IP is configured to 127.0.0.1 (LOCAL_IP) and PORT is 8000 (LOCAL_PORT)."
+	@echo "Tailwind CLI executable is set as tw4cli.exe (TW4_EXE) in the root directory."
+	@echo ""
 
 migrations:
 ifeq ($(APP),)
